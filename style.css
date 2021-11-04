@@ -1,0 +1,175 @@
+/* Charizard */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    position: relative;
+    overflow-x: hidden;
+}
+
+.card {
+    position: absolute;
+    height: 50vh;
+    border-radius: 2vw;
+}
+
+.dorso {
+    position: absolute;
+    height: 50vh;
+    top: 50vh;
+    margin-top: 20px;
+}
+
+.charizard {
+    position: absolute;
+    width: 55vw;
+    top: 10vh;
+    left: 40%;
+    animation: jump 1s linear infinite;
+    transform: rotatey(180deg);
+}
+
+
+.video {
+    position: fixed;
+    width: 100%;
+}
+
+@keyframes jump {
+    100% {
+        transform: translateY(-10px);
+    }
+
+    50% {
+        transform: translateY(20px);
+    }
+
+    0% {
+        transform: translateY(-10px);
+    }
+}
+
+
+.main {
+    position: relative;
+    width: 18.7vw;
+    height: 49vh;
+    perspective: 1000px;
+    margin-left: 10vw;
+    padding-top: 15vh;
+}
+
+.card {
+    width: 18.7vw;
+    height: 49vh;
+    transition: all 1.5s ease;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    border-radius: .8vw;
+    box-shadow: .5px 1px 10px black;
+}
+
+.card:hover {
+    transform: rotateY(180deg);
+}
+
+.front {
+    width: 18.7vw;
+    height: 49vh;
+    position: absolute;
+    backface-visibility: hidden;
+    background: url(assets/face.png);
+    transform-style: preserve-3d;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.back {
+    position: absolute;
+    width: 18.7vw;
+    height: 49vh;
+    backface-visibility: hidden;
+    border-radius: .8vw;
+    background:url(assets/back.png);
+    transform: rotateY(180deg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+.shadow {
+    background-color: black;
+    height: 10vh;
+    width: 100%;
+    position: fixed;
+    bottom: -21vh;
+    border-radius:50%;
+    filter: blur(2.2vw);
+    z-index: -100;
+
+}
+
+
+/* body {
+    margin: 0;
+    overflow-y: hidden;
+    background:rgb(6, 86, 133);
+} */
+
+/* .night {
+    height: 80vh;
+    width: 70vw;
+    margin: 5rem auto;
+    background: url(assets/Img_1.png);
+    background-size: cover;
+    position: relative;
+    box-shadow:1px 2px 60px rgba(0,0,0,.4);
+    overflow-x: hidden;
+}
+
+
+.surface {
+    height: 30%;
+    width: 1000%;
+    background: url(assets/Img_02.png);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-repeat: repeat-x;
+    animation: moving  10s linear infinite;
+}
+
+.car {
+    position: absolute;
+    bottom: 14.5%;
+    left: 20%;
+    animation: jump 1s infinite;
+}
+ */
+
+/* Animations */
+/* 
+@keyframes moving {
+    100% {
+        transform: translateX(-2900px);
+    }
+}
+
+@keyframes jump {
+    100% {
+        transform: translateY(-1px);
+    }
+
+    50% {
+        transform: translateY(2px);
+    }
+
+    0% {
+        transform: translateY(-1px);
+    }
+} */
